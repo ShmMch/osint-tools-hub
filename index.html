@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSINT Tools Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="appHeader" class="topbar">
+      <div class="container topbar__inner">
+        <div>
+          <h1>OSINT Tools Hub</h1>
+          <p>Search quickly, filter by tag, and open tools directly.</p>
+        </div>
+        <div class="topbar__actions">
+          <button id="openAddModalBtn" class="btn btn--primary" type="button">Add Tool</button>
+          <button id="exportJsonBtn" class="btn btn--ghost" type="button">Export tools.json</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="appMain" class="container page">
+      <section class="toolbar">
+        <div class="search-wrap">
+          <label class="sr-only" for="searchInput">Search tools</label>
+          <input id="searchInput" type="search" placeholder="Search by name, tag, or description..." />
+          <button id="clearSearchBtn" class="btn btn--ghost" type="button">Clear</button>
+        </div>
+        <div class="meta">
+          <span><strong id="resultCount">0</strong> tools</span>
+          <span><strong id="tagCount">0</strong> tags</span>
+        </div>
+      </section>
+
+      <section class="tags-panel">
+        <div class="tags-panel__head">
+          <h2>Tags</h2>
+          <button id="resetTagsBtn" class="btn btn--ghost" type="button">Reset</button>
+        </div>
+        <div id="tagFilters" class="tags"></div>
+      </section>
+
+      <section>
+        <div id="toolGrid" class="tool-grid"></div>
+      </section>
+    </main>
+
+    <div id="modalOverlay" class="modal-overlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="addToolTitle">
+        <div class="modal__head">
+          <h3 id="addToolTitle">Add New Tool</h3>
+          <button id="closeModalBtn" class="btn btn--ghost" type="button">Close</button>
+        </div>
+        <form id="addToolForm" class="modal__form">
+          <label>
+            Tool Name
+            <input id="toolNameInput" type="text" required />
+          </label>
+          <label>
+            URL
+            <input id="toolUrlInput" type="url" placeholder="https://example.com" required />
+          </label>
+          <label>
+            Tags (comma-separated)
+            <input id="toolTagsInput" type="text" placeholder="Search Engines, Images" required />
+          </label>
+          <label>
+            Short Description
+            <input id="toolDescInput" type="text" required />
+          </label>
+          <div class="modal__actions">
+            <button class="btn btn--primary" type="submit">Save Tool</button>
+            <button id="cancelAddBtn" class="btn btn--ghost" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
