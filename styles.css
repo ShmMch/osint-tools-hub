@@ -9,9 +9,9 @@
   --text-soft: #556478;
   --line: #cfdae7;
   --line-strong: #b7c6d8;
-  --primary: #0f766e;
-  --primary-strong: #0b5d57;
-  --primary-soft: #d8f2ee;
+  --primary: #2563eb;
+  --primary-strong: #1d4ed8;
+  --primary-soft: #dbeafe;
   --accent: #f59e0b;
   --radius: 16px;
   --shadow-soft: 0 16px 40px rgba(10, 42, 74, 0.08);
@@ -29,7 +29,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 8% 3%, rgba(15, 118, 110, 0.15), transparent 35%),
+    radial-gradient(circle at 8% 3%, rgba(37, 99, 235, 0.15), transparent 35%),
     radial-gradient(circle at 91% 7%, rgba(245, 158, 11, 0.14), transparent 32%),
     linear-gradient(180deg, #f8fbff 0%, var(--bg) 54%, #eef4fb 100%);
   color: var(--text);
@@ -143,8 +143,8 @@ body::before {
 #searchInput:focus,
 .modal__form input:focus {
   outline: none;
-  border-color: rgba(15, 118, 110, 0.55);
-  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.14);
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
 }
 
 .meta {
@@ -223,7 +223,7 @@ body::before {
 
 .tool-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(15, 118, 110, 0.4);
+  border-color: rgba(37, 99, 235, 0.4);
   box-shadow: 0 14px 28px rgba(10, 49, 85, 0.14);
 }
 
@@ -298,12 +298,12 @@ body::before {
 .btn:focus-visible,
 .tag:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.16);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
 }
 
 .btn--primary {
   border-color: var(--primary);
-  background: linear-gradient(180deg, #109085 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, #3b82f6 0%, var(--primary) 100%);
   color: #fff;
 }
 
